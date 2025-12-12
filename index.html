@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Documentation Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f5f5f5;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background: #2c3e50;
+      padding: 20px;
+      overflow-y: auto;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+
+    .sidebar h2 {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ecf0f1;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 8px;
+    }
+
+    .sidebar a:hover {
+      background: #34495e;
+    }
+
+    .content {
+      margin-left: 270px;
+      padding: 30px;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      padding-left: 10px;
+      border-left: 4px solid #2c3e50;
+      color: #2c3e50;
+    }
+
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="sidebar">
+    <h2>Documentation</h2>
+    <a href="#intro">Introduction</a>
+    <a href="#setup">Setup Instructions</a>
+    <a href="#usage">How to Use</a>
+    <a href="#api">API Overview</a>
+    <a href="#examples">Code Examples</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <div class="content">
+    <section id="intro">
+      <h1>Technical Documentation</h1>
+      <p>This documentation provides a detailed explanation of how to install, configure, and use the system.</p>
+    </section>
+
+    <section id="setup">
+      <h2>Setup Instructions</h2>
+      <p>Follow these steps to install and configure the system on your device.</p>
+      <ol>
+        <li>Download the installation package.</li>
+        <li>Extract the files to your working directory.</li>
+        <li>Run the installer script.</li>
+      </ol>
+    </section>
+
+    <section id="usage">
+      <h2>How to Use</h2>
+      <p>Once installed, you can launch the system using the command below:</p>
+      <pre><code>system-start --run</code></pre>
+    </section>
+
+    <section id="api">
+      <h2>API Overview</h2>
+      <p>The system exposes several API endpoints for developers.</p>
+      <ul>
+        <li><strong>/api/start</strong> — Initializes the system</li>
+        <li><strong>/api/status</strong> — Retrieves current system status</li>
+        <li><strong>/api/stop</strong> — Stops the system</li>
+      </ul>
+    </section>
+
+    <section id="examples">
+      <h2>Code Examples</h2>
+      <pre><code>// Example: Fetch system status
+fetch('/api/status')
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data));
+</code></pre>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <p><strong>Q:</strong> Is this system open source?<br>
+      <strong>A:</strong> Yes, it is available under the MIT License.</p>
+
+      <p><strong>Q:</strong> What platforms are supported?<br>
+      <strong>A:</strong> Windows, macOS, and Linux.</p>
+    </section>
+  </div>
+
+</body>
+</html>
